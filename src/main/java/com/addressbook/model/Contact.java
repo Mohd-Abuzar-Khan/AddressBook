@@ -3,6 +3,7 @@ package com.addressbook.model;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.*;
+import java.util.Objects;
 
 @Entity
 @Table(name = "contacts")
@@ -52,6 +53,22 @@ public class Contact {
     private String addressBookName;
 	
 	
+	
+	// UC7: Override equals() to compare by firstName, lastName, and addressBookName
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) return true;
+		if (obj == null || getClass() != obj.getClass()) return false;
+		Contact contact = (Contact) obj;
+		return Objects.equals(firstName, contact.firstName) &&
+			   Objects.equals(lastName, contact.lastName) &&
+			   Objects.equals(addressBookName, contact.addressBookName);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(firstName, lastName, addressBookName);
+	}
 	
 	@Override
     public String toString() {

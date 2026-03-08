@@ -24,12 +24,28 @@ public class AddressBook {
 
     /**
      * UC2: Add a contact to the address book
+     * UC7: Prevent duplicate contacts - check if contact with same name already exists
      */
-    public void addContact(Contact contact) {
-        if (contact != null) {
-            contact.setAddressBookName(this.name);
-            this.contacts.add(contact);
+    public boolean addContact(Contact contact) {
+        if (contact == null) {
+            return false;
         }
+        
+        contact.setAddressBookName(this.name);
+        
+        // UC7: Check for duplicate using Streams
+        boolean isDuplicate = contacts.stream()
+            .anyMatch(c -> c.getFirstName().equalsIgnoreCase(contact.getFirstName()) &&
+                          c.getLastName().equalsIgnoreCase(contact.getLastName()) &&
+                          c.getAddressBookName().equals(contact.getAddressBookName()));
+        
+        if (isDuplicate) {
+            System.out.println("Duplicate contact! A contact with the same name already exists in this address book.");
+            return false;
+        }
+        
+        this.contacts.add(contact);
+        return true;
     }
 
     /**
