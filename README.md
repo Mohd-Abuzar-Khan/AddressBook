@@ -39,7 +39,7 @@ AddressBook/
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Technology | Purpose |
 |------------|---------|
@@ -55,7 +55,7 @@ AddressBook/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Java 21
@@ -157,11 +157,11 @@ mvn test -Dtest=AddressBookRestAssuredTest
 
 ---
 
-## 🌐 API Reference
+## API Reference
 
 ### Contact Endpoints
 
-#### ➕ Add Contact — UC2 / UC20
+#### Add Contact — UC2 / UC20
 ```http
 POST /addressbook/contact
 Content-Type: application/json
@@ -192,21 +192,21 @@ Content-Type: application/json
 
 ---
 
-#### 📋 Get All Contacts — UC16
+####  Get All Contacts — UC16
 ```http
 GET /addressbook/contacts
 ```
 
 ---
 
-#### 🔍 Get Contact by ID — UC16
+#### Get Contact by ID — UC16
 ```http
 GET /addressbook/contact/{id}
 ```
 
 ---
 
-#### ✏️ Update Contact — UC17
+#### Update Contact — UC17
 ```http
 PUT /addressbook/contact/{id}
 Content-Type: application/json
@@ -222,7 +222,7 @@ Content-Type: application/json
 
 ---
 
-#### 🗑️ Delete Contact — UC4
+####  Delete Contact — UC4
 ```http
 DELETE /addressbook/contact/{id}
 ```
@@ -233,7 +233,7 @@ DELETE /addressbook/contact/{id}
 
 ---
 
-#### 📦 Add Multiple Contacts (Threaded) — UC21
+####  Add Multiple Contacts (Threaded) — UC21
 ```http
 POST /addressbook/contacts/bulk
 Content-Type: application/json
@@ -248,17 +248,17 @@ Content-Type: application/json
 
 ### Search & Filter Endpoints
 
-#### 🏙️ Search by City — UC8
+####  Search by City — UC8
 ```http
 GET /addressbook/contacts/city/{city}
 ```
 
-#### 🗺️ Search by State — UC8
+#### Search by State — UC8
 ```http
 GET /addressbook/contacts/state/{state}
 ```
 
-#### 👥 Group by City — UC9
+#### Group by City — UC9
 ```http
 GET /addressbook/contacts/group/city
 ```
@@ -270,12 +270,12 @@ GET /addressbook/contacts/group/city
 }
 ```
 
-#### 👥 Group by State — UC9
+#### Group by State — UC9
 ```http
 GET /addressbook/contacts/group/state
 ```
 
-#### 🔢 Count by City — UC10 / UC19
+#### Count by City — UC10 / UC19
 ```http
 GET /addressbook/contacts/count/city
 ```
@@ -287,7 +287,7 @@ GET /addressbook/contacts/count/city
 }
 ```
 
-#### 🔢 Count by State — UC10 / UC19
+#### Count by State — UC10 / UC19
 ```http
 GET /addressbook/contacts/count/state
 ```
@@ -296,22 +296,22 @@ GET /addressbook/contacts/count/state
 
 ### Sort Endpoints — UC11 / UC12
 
-#### 🔤 Sort by Name
+####  Sort by Name
 ```http
 GET /addressbook/contacts/sort/name
 ```
 
-#### 🏙️ Sort by City
+####  Sort by City
 ```http
 GET /addressbook/contacts/sort/city
 ```
 
-#### 🗺️ Sort by State
+####  Sort by State
 ```http
 GET /addressbook/contacts/sort/state
 ```
 
-#### 📮 Sort by Zip
+#### Sort by Zip
 ```http
 GET /addressbook/contacts/sort/zip
 ```
@@ -320,12 +320,12 @@ GET /addressbook/contacts/sort/zip
 
 ### Address Book & Date Endpoints
 
-#### 📖 Get by Address Book — UC6
+#### Get by Address Book — UC6
 ```http
 GET /addressbook/contacts/book/{bookName}
 ```
 
-#### 📅 Get by Date Range — UC18
+#### Get by Date Range — UC18
 ```http
 GET /addressbook/contacts/date?start=2024-01-01&end=2024-12-31
 ```
@@ -334,24 +334,24 @@ GET /addressbook/contacts/date?start=2024-01-01&end=2024-12-31
 
 ### File IO Endpoints — Section 2
 
-#### 💾 Write to JSON File — UC15
+####  Write to JSON File — UC15
 ```http
 POST /addressbook/file/json/write
 ```
 
-#### 📂 Read from JSON File — UC15
+#### Read from JSON File — UC15
 ```http
 GET /addressbook/file/json/read
 ```
 
-#### 🔄 Sync JSON File to DB — UC22
+#### Sync JSON File to DB — UC22
 ```http
 POST /addressbook/file/json/sync
 ```
 
 ---
 
-## ⚠️ Error Handling
+##  Error Handling
 
 All errors return a structured JSON response:
 
@@ -441,7 +441,7 @@ to ensure the main thread is never blocked during IO.
 
 ---
 
-## 🗄️ Database Schema
+##  Database Schema
 
 ```sql
 CREATE TABLE contacts (
@@ -462,7 +462,7 @@ CREATE TABLE contacts (
 
 ---
 
-## 🌿 Git Branch Strategy
+##  Git Branch Strategy
 
 Each use case is developed on its own branch and merged to `main`:
 
