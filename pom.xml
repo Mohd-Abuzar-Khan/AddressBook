@@ -72,6 +72,18 @@
 		    <artifactId>lombok</artifactId>
 		    <scope>provided</scope>
 		</dependency>
+		<!-- UC14: OpenCSV for CSV file operations -->
+		<dependency>
+			<groupId>com.opencsv</groupId>
+			<artifactId>opencsv</artifactId>
+			<version>5.9</version>
+		</dependency>
+		<!-- UC15: GSON for JSON file operations -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.10.1</version>
+		</dependency>
 	</dependencies>
 
 	<build>
