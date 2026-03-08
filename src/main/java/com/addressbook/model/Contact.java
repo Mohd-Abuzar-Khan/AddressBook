@@ -52,6 +52,10 @@ public class Contact {
     @Column(name = "address_book_name")
     private String addressBookName;
 	
+	// UC18: Date added field
+	@Column(name = "date_added")
+	private java.time.LocalDate dateAdded;
+	
 	
 	
 	// UC7: Override equals() to compare by firstName, lastName, and addressBookName
