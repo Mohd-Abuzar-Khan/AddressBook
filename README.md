@@ -199,7 +199,7 @@ GET /addressbook/contacts
 
 ---
 
-#### Get Contact by ID — UC16
+#### Get Contact by ID — UC16 (Optional)
 ```http
 GET /addressbook/contact/{id}
 ```
